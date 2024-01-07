@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
-import { Header,Body } from './components'
+import { Header, Body, Footer } from './components'
 import getInitialData from './utils/getInitialData';
 
 function App() {
@@ -28,6 +28,7 @@ function App() {
           notesArchive={notesArchive}
           setNotes={setNotes}
         />
+        <Footer/>
       </div>
     </>
   )
