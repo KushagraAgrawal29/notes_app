@@ -1,11 +1,13 @@
-
+import { useState } from 'react'
 import './App.css'
+import { Header } from './components'
 
 function App() {
+  const [query,setQuery] = useState("");
   return (
     <>
       <div>
-        <h1 className='flex justify-center items-center text-4xl text-red-600'>Welcome to our website!</h1>
+        <Header search={query} setQuery={setQuery}/>
       </div>
     </>
   )
