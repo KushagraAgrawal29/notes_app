@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Input from "./Input";
+import { handleClick } from "./Alert";
 
 const Content = ({ setNotes }) => {
     const [title,setTitle] = useState("");

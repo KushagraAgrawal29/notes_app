@@ -1,5 +1,6 @@
 import Action from "./Action"
 import ShowItems from "./ShowItems"
+import { handleClickConfirm } from "./Alert";
 
 const Items = ({ id,body,title,createdAt,archived,action }) => {
     const onDeleteNode = (item) => {
