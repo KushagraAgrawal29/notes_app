@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <div>
+    <div className="note-app__footer">
       <center>
         Copyright &#169; 2023,{" "}
         <a

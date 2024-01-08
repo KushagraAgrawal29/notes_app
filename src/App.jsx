@@ -21,7 +21,7 @@ function App() {
 
   return (
     <>
-      <div>
+      <div className='note-app'>
         <Header search={query} setQuery={setQuery}/>
         <Body 
           notesAll={notesAll}

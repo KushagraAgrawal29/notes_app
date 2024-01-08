@@ -3,23 +3,23 @@ import ShowItems from "./ShowItems"
 import { handleClickConfirm } from "./Alert";
 
 const Items = ({ id,body,title,createdAt,archived,action }) => {
-    const onDeleteNode = (item) => {
+    const onDeleteNote = (item) => {
         handleClickConfirm(
             item,
-            Action,
+            action,
             "delete",
             "Are you sure?",
-            "You want be able to revert this",
+            "You won't be able to revert this",
             "Warning",
             "Yes, delete it!"
         );
     };
 
-    const onArchiveNode = (item) => {
+    const onArchiveNote = (item) => {
         !archived 
         ? handleClickConfirm(
             item,
-            Action,
+            action,
             "archive",
             "Are you sure?",
             "Do you want to 'archive' this note?.",
@@ -37,7 +37,7 @@ const Items = ({ id,body,title,createdAt,archived,action }) => {
         )
     }
   return (
-    <div className="flex flex-col border border-gray-300 rounded-md overflow-hidden">
+    <div className="note-item">
         <ShowItems
             title={title}
             body={body}
@@ -46,8 +46,8 @@ const Items = ({ id,body,title,createdAt,archived,action }) => {
             action={action}
         />
         <Action
-            onDeleteNode={onDeleteNode}
-            onArchiveNode={onArchiveNode}
+            onDeleteNote={onDeleteNote}
+            onArchiveNote={onArchiveNote}
             id={id}
             archived={archived}
         />
