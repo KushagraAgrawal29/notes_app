@@ -28,7 +28,7 @@ const Items = ({ id,body,title,createdAt,archived,action }) => {
         ) 
         : handleClickConfirm(
             item,
-            Action,
+            action,
             "unarchive",
             "Are you Sure?",
             "Do you want to 'unarchive' this note?.",
